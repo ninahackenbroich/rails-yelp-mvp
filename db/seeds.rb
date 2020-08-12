@@ -16,7 +16,7 @@ puts "Creating some restaurants..."
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.phone_number,
-    category: CATEGORIES.sample
+    category: ["chinese", "italian", "japanese", "french", "belgian"].sample
     )
   puts "Restaurant with id #{restaurant.id} was created"
 
@@ -24,18 +24,18 @@ end
 
 puts "Created #{Restaurant.count} restaurants"
 
-puts "Cleaning database..."
-Review.destroy_all
+# puts "Cleaning database..."
+# Review.destroy_all
 
-puts "Creating some reviews..."
-10.times do
-  review = Review.create(
-    content: Faker::Restaurant.review,
-    stars: rand(1..5)
-    restaurant: 
-    )
-  puts "Reviews with id #{restaurant.id} was created"
+# puts "Creating some reviews..."
+# 10.times do
+#   review = Review.create(
+#     content: Faker::Restaurant.review,
+#     stars: rand(1..5)
+#     restaurant: 
+#     )
+#   puts "Reviews with id #{restaurant.id} was created"
 
-end
+# end
 
-puts "Created #{Restaurant.count} restaurants"
+# puts "Created #{Restaurant.count} restaurants"

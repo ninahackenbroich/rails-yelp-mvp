@@ -1,0 +1,12 @@
+<h1>Add your review to <%= @restaurant.name %></h1>
+
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.label :content, "Your Review" %>
+  <%= f.text_area :content %>
+  <br>
+  <%= f.label :rating, "Your Rating(1-5)" %>
+  <%= f.input :rating %>
+  <br>
+  <%= f.submit %>
+<% end %>
