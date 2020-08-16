@@ -1,6 +1,6 @@
 <h1>Add your favourite restaurant</h1>
 
-<%= form_for(@restaurant) do |f| %>
+<%= simple_form_for(@restaurant) do |f| %>
   <%= f.label :name, "Name of your restaurant" %>
   <%= f.text_field :name %>
   <br>
